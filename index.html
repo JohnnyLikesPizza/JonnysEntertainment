@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Roblox Game</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #d6d6d6;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        /* Верхняя панель */
+
+        .topbar {
+            height: 48px;
+            background: linear-gradient(#5c5c5c, #3f3f3f);
+            border-bottom: 1px solid #222;
+            box-shadow: 0 1px 3px #888;
+        }
+
+        .topbar-inner {
+            width: 1000px;
+            margin: auto;
+            height: 48px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            margin-right: 30px;
+            text-shadow: 1px 1px #222;
+        }
+
+        .nav {
+            display: flex;
+            height: 100%;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 16px 18px;
+            font-size: 14px;
+            border-left: 1px solid #555;
+        }
+
+        .nav a:hover {
+            background: #666;
+        }
+
+        /* Основная область */
+
+        .page {
+            width: 1000px;
+            margin: 18px auto;
+        }
+
+        .content {
+            display: flex;
+            gap: 15px;
+        }
+
+        .main {
+            width: 700px;
+        }
+
+        .sidebar {
+            width: 285px;
+        }
+
+        /* Панели */
+
+        .box {
+            background: #eee;
+            border: 1px solid #aaa;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 2px #aaa;
+        }
+
+        .box-title {
+            height: 36px;
+            padding: 10px 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(#777, #555);
+            border-bottom: 1px solid #444;
+            text-shadow: 1px 1px #333;
+        }
+
+        .box-content {
+            padding: 15px;
+        }
+
+        /* Главный баннер */
+
+        .hero {
+            background: linear-gradient(#fafafa, #dcdcdc);
+            border: 1px solid #aaa;
+            padding: 25px;
+            min-height: 230px;
+            position: relative;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: 30px;
+            color: #444;
+        }
+
+        .hero p {
+            width: 60%;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .old-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 22px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            background: linear-gradient(#6fae35, #4d8520);
+            border: 1px solid #386414;
+            border-radius: 3px;
+            box-shadow: inset 0 1px rgba(255,255,255,.3);
+        }
+
+        .old-button:hover {
+            background: linear-gradient(#82c346, #5b9828);
+        }
+
+        /* Игра */
+
+        .game-preview {
+            height: 250px;
+            background:
+                linear-gradient(135deg, #888 25%, transparent 25%) -10px 0,
+                linear-gradient(225deg, #888 25%, transparent 25%) -10px 0,
+                linear-gradient(315deg, #888 25%, transparent 25%),
+                linear-gradient(45deg, #888 25%, #777 25%);
+            background-size: 20px 20px;
+            border: 1px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px #333;
+        }
+
+        .game-info {
+            padding-top: 12px;
+        }
+
+        .stats {
+            display: flex;
+            border-top: 1px solid #ccc;
+            margin-top: 15px;
+            padding-top: 12px;
+        }
+
+        .stat {
+            width: 33.33%;
+            text-align: center;
+            border-right: 1px solid #ccc;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #777;
+            font-size: 12px;
+        }
+
+        /* Новости */
+
+        .news {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .news:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .news-date {
+            font-size: 11px;
+            color: #888;
+            margin-top: 3px;
+        }
+
+        /* Сайдбар */
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            background: #aaa;
+            border: 1px solid #777;
+            margin: auto auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .username {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .online {
+            text-align: center;
+            color: #3d8b22;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .menu-button {
+            display: block;
+            padding: 10px;
+            margin-bottom: 7px;
+            background: linear-gradient(#fafafa, #ddd);
+            border: 1px solid #aaa;
+            color: #444;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .menu-button:hover {
+            background: #fff;
+        }
+
+        /* Футер */
+
+        footer {
+            margin-top: 25px;
+            padding: 20px 0;
+            text-align: center;
+            color: #666;
+            font-size: 11px;
+            border-top: 1px solid #aaa;
+        }
+
+        @media (max-width: 1050px) {
+            .page,
+            .topbar-inner {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .content {
+                display: block;
+            }
+
+            .main,
+            .sidebar {
+                width: 100%;
+            }
+
+            .hero p {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Верхнее меню -->
+
+    <div class="topbar">
+        <div class="topbar-inner">
+
+            <div class="logo">ROBLOX</div>
+
+            <div class="nav">
+                <a href="#">Games</a>
+                <a href="#">Catalog</a>
+                <a href="#">People</a>
+                <a href="#">Groups</a>
+                <a href="#">Forum</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Страница -->
+
+    <div class="page">
+
+        <div class="content">
+
+            <!-- Левая часть -->
+
+            <div class="main">
+
+                <div class="hero">
+
+                    <h1>My Roblox Game</h1>
+
+                    <p>
+                        Welcome to my game website!
+                        This is a classic Roblox-style website
+                        inspired by the 2012–2013 era.
+                    </p>
+
+                    <p>
+                        Find the code, survive the killer
+                        and escape before it's too late!
+                    </p>
+
+                    <a class="old-button" href="#">
+                        PLAY NOW
+                    </a>
+
+                </div>
+
+
+                <div class="box">
+
+                    <div class="box-title">
+                        Game
+                    </div>
+
+                    <div class="box-content">
+
+                        <div class="game-preview">
+                            GAME PREVIEW
+                        </div>
+
+                        <div class="game-info">
+
+                            <h2>Find The Code and Escape</h2>
+
+                            <p>
+                                Find the secret code and escape
+                                from the facility. Watch out for
+                                the killer!
+                            </p>
+
+                            <div class="stats">
+
+                                <div class="stat">
+                                    <div class="stat-number">1,245</div>
+                                    <div class="stat-label">Visits</div>
+                                </div>
+
+                                <div class="stat">
+                                    <div class="stat-number">87%</div>
+                                    <div class="stat-label">Rating</div>
+                                </div>
+
+                                <div class="stat">
+                                    <div class="stat-number">2013</div>
+                                    <div class="stat-label">Created</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="box">
+
+                    <div class="box-title">
+                        News
+                    </div>
+
+                    <div class="box-content">
+
+                        <div class="news">
+
+                            <div class="news-title">
+                                New map released!
+                            </div>
+
+                            <div class="news-date">
+                                August 21, 2013
+                            </div>
+
+                            <p>
+                                A new facility map has been added
+                                to the game.
+                            </p>
+
+                        </div>
+
+                        <div class="news">
+
+                            <div class="news-title">
+                                Welcome!
+                            </div>
+
+                            <div class="news-date">
+                                August 15, 2013
+                            </div>
+
+                            <p>
+                                Welcome to the official game website.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Правая часть -->
+
+            <div class="sidebar">
+
+                <div class="box">
+
+                    <div class="box-title">
+                        Player
+                    </div>
+
+                    <div class="box-content">
+
+                        <div class="avatar">
+                            ?
+                        </div>
+
+                        <div class="username">
+                            Builderman
+                        </div>
+
+                        <div class="online">
+                            ● Online
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="box">
+
+                    <div class="box-title">
+                        Menu
+                    </div>
+
+                    <div class="box-content">
+
+                        <a class="menu-button" href="#">
+                            My Profile
+                        </a>
+
+                        <a class="menu-button" href="#">
+                            My Games
+                        </a>
+
+                        <a class="menu-button" href="#">
+                            My Friends
+                        </a>
+
+                        <a class="menu-button" href="#">
+                            Messages
+                        </a>
+
+                        <a class="menu-button" href="#">
+                            Settings
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="box">
+
+                    <div class="box-title">
+                        Server Status
+                    </div>
+
+                    <div class="box-content">
+
+                        <b>Game Servers</b>
+
+                        <p style="color:#3d8b22;">
+                            ● Online
+                        </p>
+
+                        <hr>
+
+                        <b>Players Online</b>
+
+                        <p>
+                            12 players
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <footer>
+            My Roblox Game © 2013
+            <br>
+            This is a fan-made website.
+        </footer>
+
+    </div>
+
+</body>
+</html>
