@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        rgb(19, 135, 216) 0px,
+        rgb(99, 200, 255) 330px,
+        rgb(216, 232, 240) 500px
+    );
+}
+
+/* НЕ МЕНЯЕМ ТВОЙ ФОН */
+#iru3 {
+    background-image: url('https://file.garden/akkSjhU5tXKtizxV/null_plainsky512_ft.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+#page {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#header {
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat, repeat;
+    background-position: center top, left top;
+    border-left: 1px solid rgba(255,255,255,.5);
+    border-right: 1px solid rgba(255,255,255,.5);
+}
+
+#accountArea {
+    position: absolute;
+    left: 10px;
+    top: 43px;
+    z-index: 5;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px #333;
+}
+
+.account-user {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.account-button {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-left: 3px;
+    border: 1px solid #555;
+    background: linear-gradient(#fafafa, #cfcfcf);
+    color: #333;
+    text-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.account-button:hover {
+    background: linear-gradient(#fff, #ddd);
+}
+
+#nav {
+    height: 30px;
+    background: linear-gradient(
+        rgb(75,155,229),
+        rgb(20,101,182)
+    );
+    border: 1px solid rgb(13,76,145);
+    box-shadow: rgba(255,255,255,.4) 0 1px inset;
+}
+
+#nav a {
+    display: inline-block;
+    height: 28px;
+    padding: 7px 12px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-right: 1px solid rgba(0,0,0,.2);
+    text-shadow: 1px 1px rgb(23,81,138);
+}
+
+#nav a:hover {
+    background: linear-gradient(
+        rgb(114,180,237),
+        rgb(36,117,194)
+    );
+}
+
+#content {
+    margin-top: 7px;
+    background: rgb(238,238,238);
+    border: 1px solid rgb(170,170,170);
+    padding: 6px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 180px 1fr 190px;
+    gap: 7px;
+}
+
+.box {
+    background: white;
+    border: 1px solid rgb(187,187,187);
+    margin-bottom: 7px;
+}
+
+.box-title {
+    height: 28px;
+    padding: 7px 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    background: linear-gradient(
+        rgb(85,85,85),
+        rgb(41,41,41)
+    );
+    border-bottom: 1px solid rgb(17,17,17);
+}
+
+.box-body {
+    padding: 8px;
+}
+
+.input {
+    width: 100%;
+    height: 23px;
+    border: 1px solid rgb(170,170,170);
+    margin: 3px 0 7px;
+    padding: 3px;
+    font-size: 11px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid rgb(119,119,119);
+    background: linear-gradient(
+        rgb(250,250,250),
+        rgb(207,207,207)
+    );
+    color: rgb(51,51,51);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: rgb(255,255,255);
+}
+
+.button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.big-play {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 40% 30%,
+        rgb(155,239,99),
+        rgb(55,165,14) 60%,
+        rgb(36,116,0)
+    );
+    border: 5px solid rgb(41,123,18);
+    box-shadow:
+        rgb(139,220,87) 0 0 0 3px inset,
+        rgba(0,0,0,.4) 0 2px 4px;
+    color: white;
+    font-size: 31px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 37px;
+    text-shadow: 2px 2px rgb(40,112,13);
+    cursor: pointer;
+    user-select: none;
+}
+
+.big-play:hover {
+    filter: brightness(1.08);
+}
+
+.big-play.disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.game-title {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    background: rgb(238,238,238);
+    border: 1px solid rgb(170,170,170);
+}
+
+.news {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.news li {
+    margin-bottom: 5px;
+}
+
+.news a {
+    color: rgb(18,98,162);
+    text-decoration: none;
+}
+
+.news a:hover {
+    text-decoration: underline;
+}
+
+.auth-message {
+    margin-top: 8px;
+    color: rgb(187,34,34);
+    font-weight: bold;
+}
+
+.auth-success {
+    color: rgb(35,130,35);
+}
+
+#authOverlay {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.45);
+    display: none;
+}
+
+.auth-window {
+    width: 360px;
+    margin: 100px auto;
+    background: rgb(238,238,238);
+    border: 1px solid rgb(85,85,85);
+    box-shadow: rgba(0,0,0,.5) 3px 3px 10px;
+}
+
+.auth-title {
+    height: 30px;
+    padding: 7px 9px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    background: linear-gradient(
+        rgb(85,85,85),
+        rgb(41,41,41)
+    );
+}
+
+.auth-body {
+    padding: 12px;
+}
+
+.auth-body label {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.auth-body input {
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgb(170,170,170);
+    margin: 4px 0 8px;
+    padding: 4px;
+    font-size: 11px;
+}
+
+.auth-switch {
+    margin-top: 10px;
+    color: rgb(18,98,162);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#footer {
+    margin-top: 10px;
+    padding: 15px;
+    background: rgb(238,238,238);
+    border: 1px solid rgb(170,170,170);
+    text-align: center;
+    color: rgb(102,102,102);
+    font-size: 11px;
+}
+
+#footer a {
+    color: rgb(40,105,162);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+#iv73yl {
+    color: black;
+    width: 564px;
+    height: 353px;
+}
+
+#ixp2gz {
+    height: 320px;
+    width: 100%;
+    border: 0;
+}
+
+#iz498a {
+    padding: 10px;
+}
+
+#iqmhcr {
+    color: black;
+    position: relative;
+    top: -20px;
+    width: 500px;
+    height: 110px;
+    right: -250px;
+}
+
+#indlou {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border: 1px solid rgb(204,204,204);
+    font-size: 11px;
+    line-height: 1.5em;
+    font-family: Verdana, sans-serif;
+    max-height: 200px;
+    padding: 4px 8px 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: black;
+}
+
+.login-state {
+    padding: 5px;
+    margin-bottom: 7px;
+    background: #eee;
+    border: 1px solid #ccc;
+    font-size: 11px;
+}
+
+.profile-link {
+    color: rgb(18,98,162);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    #page {
+        width: 96%;
+    }
+}
+
+@media (max-width: 700px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+
+    #nav {
+        height: auto;
+    }
+
+    #nav a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #iqmhcr {
+        right: 0;
+        width: 400px;
+    }
+}
+
+</style>
+</head>
+
+
+<body id="iru3">
+
+<div id="page">
+
+<header id="header">
+
+    <div id="iz498a">
+        <b></b>
+    </div>
+
+    <div id="accountArea"></div>
+
+    <img
+        id="iqmhcr"
+        src="https://file.garden/akkSjhU5tXKtizxV/absolute2.png"
+    >
+
+</header>
+
+
+<nav id="nav">
+
+    <a href="index.html">My ROBLOX</a>
+
+    <a href="#" onclick="return requireLogin('Games');">
+        Games
+    </a>
+
+    <a href="#" onclick="return requireLogin('People');">
+        People
+    </a>
+
+    <a href="#" onclick="return requireLogin('Contests');">
+        Contests
+    </a>
+
+    <a href="forum.html">
+        Forum
+    </a>
+
+    <a href="#" onclick="return requireLogin('Help');">
+        Help
+    </a>
+
+</nav>
+
+
+<main id="content">
+
+<div class="columns">
+
+
+<!-- LEFT -->
+
+<aside>
+
+    <div class="box">
+
+        <div class="box-title">
+            Member Login
+        </div>
+
+        <div id="memberBox" class="box-body">
+
+            <div id="loggedOutBox">
+
+                <label>
+                    Email:
+                </label>
+
+                <input
+                    id="loginEmail"
+                    type="email"
+                    placeholder="Email"
+                    class="input"
+                >
+
+                <label>
+                    Password:
+                </label>
+
+                <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Password"
+                    class="input"
+                >
+
+                <button
+                    id="loginButton"
+                    class="button"
+                >
+                    Login
+                </button>
+
+                <button
+                    id="registerButton"
+                    class="button"
+                >
+                    Register
+                </button>
+
+            </div>
+
+
+            <div id="loggedInBox" style="display:none;">
+
+                <div class="login-state">
+                    You are logged in as:
+                    <br>
+                    <strong id="loggedUsername"></strong>
+                </div>
+
+                <a
+                    id="loggedProfileLink"
+                    href="#"
+                    class="profile-link"
+                >
+                    My Profile
+                </a>
+
+                <button
+                    id="logoutButton"
+                    class="button"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+
+            <div
+                id="loginMessage"
+                class="auth-message"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="box">
+
+        <div class="box-title">
+            My ROBLOX
+        </div>
+
+        <div class="box-body">
+
+            <a
+                href="#"
+                id="myProfileLink"
+                class="profile-link"
+            >
+                My Profile
+            </a>
+
+            <br><br><br><br><br><br><br><br>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- CENTER -->
+
+<section>
+
+    <div class="box">
+
+        <div class="box-body">
+
+            <iframe
+                id="ixp2gz"
+                src="https://www.youtube.com/embed/vbrII7frHV0"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+
+        </div>
+
+    </div>
+
+
+    <div class="box">
+
+        <div class="box-title">
+            Featured Free Game:
+            Welcome to roblox building
+        </div>
+
+        <div class="box-body">
+
+            <div class="game-title">
+                Welcome To Roblox Building
+            </div>
+
+            <img
+                id="iv73yl"
+                src="https://file.garden/akkSjhU5tXKtizxV/640cb71e1e3a550e285e3b58b23283e5.png"
+            >
+
+            <pre id="indlou">Featuring the new Stamper Tool and data saving of whatever you build! Create a cool home plate and show it off to your friends.
+
+Also check out the new tutorials.</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RIGHT -->
+
+<aside>
+
+    <div class="box">
+
+        <div class="box-title">
+            Play ROBLOX
+        </div>
+
+        <div class="box-body">
+
+            <div
+                id="playButton"
+                class="big-play disabled"
+            >
+                PLAY<br>
+                NOW
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="box"></div>
+
+    <div class="box"></div>
+
+
+    <div class="box">
+
+        <div class="box-title">
+            Roblox News
+        </div>
+
+        <div class="box-body">
+
+            <ul class="news">
+
+                <li>
+                    <a href="#">
+                        New ROBLOX update!
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contest winners
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contest winners
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+</div>
+
+</main>
+
+
+<footer id="footer">
+
+    <a href="#">About Us</a>
+    <a href="#">Jobs</a>
+    <a href="#">Terms</a>
+    <a href="#">Privacy</a>
+    <a href="#">Contact</a>
+    <a href="#">Help</a>
+
+    <br><br>
+
+    © 2026 Jonny's Absolute Entertainment.
+    All Rights Reserved.
+
+</footer>
+
+</div>
+
+
+<!-- AUTH WINDOW -->
+
+<div id="authOverlay">
+
+    <div class="auth-window">
+
+        <div
+            id="authTitle"
+            class="auth-title"
+        >
+            Register
+        </div>
+
+
+        <div class="auth-body">
+
+            <div id="registerForm">
+
+                <label>
+                    Username
+                </label>
+
+                <input
+                    id="registerUsername"
+                    type="text"
+                    placeholder="Username"
+                >
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    id="registerEmail"
+                    type="email"
+                    placeholder="Email"
+                >
+
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    id="registerPassword"
+                    type="password"
+                    placeholder="Password"
+                >
+
+
+                <button
+                    id="registerConfirmButton"
+                    class="button"
+                >
+                    Register
+                </button>
+
+
+                <button
+                    id="cancelButton"
+                    class="button"
+                >
+                    Cancel
+                </button>
+
+
+                <div
+                    id="authSwitch"
+                    class="auth-switch"
+                >
+                    Already have an account? Login
+                </div>
+
+
+                <div
+                    id="registerMessage"
+                    class="auth-message"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script>
+
+/* =========================================================
+   SUPABASE CONFIG
+   ========================================================= */
+
+/*
+    ВСТАВЬ СЮДА ДАННЫЕ СВОЕГО SUPABASE ПРОЕКТА.
+
+    Например:
+
+    const SUPABASE_URL =
+        "https://xxxxxxxxxxxx.supabase.co";
+
+    const SUPABASE_ANON_KEY =
+        "eyJhbGciOiJIUzI1NiIs...";
+*/
+
+const SUPABASE_URL = "https://kczmmvnkbrzgjmrfimpk.supabase.co";
+
+const SUPABASE_ANON_KEY = "sb_publishable_-LpvaJw7Z4Y323hhPZfxbA_OfMtyq2-";
+
+
+/* =========================================================
+   CREATE SUPABASE CLIENT
+   ========================================================= */
+
+const { createClient } = supabase;
+
+const db = createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+);
+
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+const authOverlay =
+    document.getElementById("authOverlay");
+
+const authTitle =
+    document.getElementById("authTitle");
+
+const registerUsername =
+    document.getElementById("registerUsername");
+
+const registerEmail =
+    document.getElementById("registerEmail");
+
+const registerPassword =
+    document.getElementById("registerPassword");
+
+const registerMessage =
+    document.getElementById("registerMessage");
+
+const loginMessage =
+    document.getElementById("loginMessage");
+
+const accountArea =
+    document.getElementById("accountArea");
+
+const loggedOutBox =
+    document.getElementById("loggedOutBox");
+
+const loggedInBox =
+    document.getElementById("loggedInBox");
+
+const loggedUsername =
+    document.getElementById("loggedUsername");
+
+const loggedProfileLink =
+    document.getElementById("loggedProfileLink");
+
+const myProfileLink =
+    document.getElementById("myProfileLink");
+
+const playButton =
+    document.getElementById("playButton");
+
+
+let currentUser = null;
+
+
+/* =========================================================
+   MESSAGE FUNCTIONS
+   ========================================================= */
+
+function showLoginMessage(message, success = false) {
+
+    loginMessage.textContent = message;
+
+    loginMessage.className =
+        success
+        ? "auth-message auth-success"
+        : "auth-message";
+}
+
+
+function showRegisterMessage(message, success = false) {
+
+    registerMessage.textContent = message;
+
+    registerMessage.className =
+        success
+        ? "auth-message auth-success"
+        : "auth-message";
+}
+
+
+/* =========================================================
+   OPEN REGISTER
+   ========================================================= */
+
+document
+.getElementById("registerButton")
+.addEventListener("click", function() {
+
+    authTitle.textContent = "Register";
+
+    authOverlay.style.display = "block";
+
+    showRegisterMessage("");
+
+    registerUsername.value = "";
+    registerEmail.value = "";
+    registerPassword.value = "";
+
+});
+
+
+/* =========================================================
+   CANCEL REGISTER
+   ========================================================= */
+
+document
+.getElementById("cancelButton")
+.addEventListener("click", function() {
+
+    authOverlay.style.display = "none";
+
+    showRegisterMessage("");
+
+});
+
+
+/* =========================================================
+   REGISTER
+   ========================================================= */
+
+document
+.getElementById("registerConfirmButton")
+.addEventListener("click", async function() {
+
+    const username =
+        registerUsername.value.trim();
+
+    const email =
+        registerEmail.value.trim();
+
+    const password =
+        registerPassword.value;
+
+
+    if (!username) {
+
+        showRegisterMessage(
+            "Please enter a username."
+        );
+
+        return;
+    }
+
+
+    if (username.length < 3) {
+
+        showRegisterMessage(
+            "Username must contain at least 3 characters."
+        );
+
+        return;
+    }
+
+
+    if (!email) {
+
+        showRegisterMessage(
+            "Please enter your email."
+        );
+
+        return;
+    }
+
+
+    if (!password) {
+
+        showRegisterMessage(
+            "Please enter a password."
+        );
+
+        return;
+    }
+
+
+    if (password.length < 6) {
+
+        showRegisterMessage(
+            "Password must contain at least 6 characters."
+        );
+
+        return;
+    }
+
+
+    showRegisterMessage(
+        "Creating account...",
+        true
+    );
+
+
+    try {
+
+        /*
+         * Username сохраняем в user_metadata.
+         */
+
+        const { data, error } =
+            await db.auth.signUp({
+
+                email: email,
+
+                password: password,
+
+                options: {
+
+                    data: {
+                        username: username
+                    }
+
+                }
+
+            });
+
+
+        if (error) {
+
+            showRegisterMessage(
+                error.message
+            );
+
+            return;
+        }
+
+
+        /*
+         * Если подтверждение email отключено
+         * в Supabase, пользователь войдёт сразу.
+         */
+
+        if (data.session) {
+
+            showRegisterMessage(
+                "Account created successfully!",
+                true
+            );
+
+            authOverlay.style.display = "none";
+
+            await updateAuthUI(data.session.user);
+
+        } else {
+
+            showRegisterMessage(
+                "Account created. Please check your email if confirmation is required.",
+                true
+            );
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        showRegisterMessage(
+            "Registration failed."
+        );
+
+    }
+
+});
+
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+document
+.getElementById("loginButton")
+.addEventListener("click", login);
+
+
+async function login() {
+
+    const email =
+        document
+        .getElementById("loginEmail")
+        .value
+        .trim();
+
+    const password =
+        document
+        .getElementById("loginPassword")
+        .value;
+
+
+    if (!email || !password) {
+
+        showLoginMessage(
+            "Enter your email and password."
+        );
+
+        return;
+    }
+
+
+    showLoginMessage(
+        "Logging in...",
+        true
+    );
+
+
+    try {
+
+        const { data, error } =
+            await db.auth.signInWithPassword({
+
+                email: email,
+
+                password: password
+
+            });
+
+
+        if (error) {
+
+            showLoginMessage(
+                error.message
+            );
+
+            return;
+        }
+
+
+        if (!data.session || !data.user) {
+
+            showLoginMessage(
+                "Login failed."
+            );
+
+            return;
+        }
+
+
+        document
+        .getElementById("loginEmail")
+        .value = "";
+
+        document
+        .getElementById("loginPassword")
+        .value = "";
+
+
+        showLoginMessage(
+            "Logged in!",
+            true
+        );
+
+
+        await updateAuthUI(data.user);
+
+    } catch (error) {
+
+        console.error(error);
+
+        showLoginMessage(
+            "Login failed."
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+document
+.getElementById("logoutButton")
+.addEventListener("click", async function() {
+
+    const { error } =
+        await db.auth.signOut();
+
+
+    if (error) {
+
+        console.error(error);
+
+        showLoginMessage(
+            "Logout failed."
+        );
+
+        return;
+    }
+
+
+    currentUser = null;
+
+    updateLoggedOutUI();
+
+});
+
+
+/* =========================================================
+   GET USERNAME
+   ========================================================= */
+
+function getUsername(user) {
+
+    if (!user) {
+        return "Guest";
+    }
+
+
+    if (
+        user.user_metadata &&
+        user.user_metadata.username
+    ) {
+
+        return user.user_metadata.username;
+
+    }
+
+
+    if (user.email) {
+
+        return user.email.split("@")[0];
+
+    }
+
+
+    return "User";
+
+}
+
+
+/* =========================================================
+   UPDATE AUTH UI
+   ========================================================= */
+
+async function updateAuthUI(user) {
+
+    if (!user) {
+
+        updateLoggedOutUI();
+
+        return;
+    }
+
+
+    currentUser = user;
+
+
+    const username =
+        getUsername(user);
+
+
+    loggedUsername.textContent =
+        username;
+
+
+    accountArea.innerHTML =
+        '<span class="account-user">Welcome, ' +
+        escapeHTML(username) +
+        '!</span>' +
+        '<button class="account-button" id="headerLogout">Logout</button>';
+
+
+    loggedOutBox.style.display =
+        "none";
+
+    loggedInBox.style.display =
+        "block";
+
+
+    playButton.classList.remove(
+        "disabled"
+    );
+
+
+    loggedProfileLink.href =
+        "profile.html?username=" +
+        encodeURIComponent(username);
+
+
+    myProfileLink.href =
+        "profile.html?username=" +
+        encodeURIComponent(username);
+
+
+    const headerLogout =
+        document.getElementById("headerLogout");
+
+
+    if (headerLogout) {
+
+        headerLogout.addEventListener(
+            "click",
+            async function() {
+
+                await db.auth.signOut();
+
+            }
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   LOGGED OUT UI
+   ========================================================= */
+
+function updateLoggedOutUI() {
+
+    currentUser = null;
+
+
+    accountArea.innerHTML =
+        '<span class="account-user">Guest</span>';
+
+
+    loggedOutBox.style.display =
+        "block";
+
+    loggedInBox.style.display =
+        "none";
+
+
+    playButton.classList.add(
+        "disabled"
+    );
+
+
+    myProfileLink.href = "#";
+
+    loggedProfileLink.href = "#";
+
+}
+
+
+/* =========================================================
+   PROFILE CHECK
+   ========================================================= */
+
+function requireLogin(pageName) {
+
+    if (!currentUser) {
+
+        showLoginMessage(
+            "You must be logged in to open " +
+            pageName +
+            "."
+        );
+
+        document
+        .getElementById("loginEmail")
+        .focus();
+
+        return false;
+    }
+
+
+    return true;
+
+}
+
+
+/* =========================================================
+   MY PROFILE
+   ========================================================= */
+
+myProfileLink.addEventListener(
+    "click",
+    function(event) {
+
+        if (!currentUser) {
+
+            event.preventDefault();
+
+            showLoginMessage(
+                "You must be logged in to view your profile."
+            );
+
+            return;
+        }
+
+
+        window.location.href =
+            "profile.html?user=" +
+            encodeURIComponent(
+                getUsername(currentUser)
+            );
+
+    }
+);
+
+
+/* =========================================================
+   LOGGED-IN PROFILE
+   ========================================================= */
+
+loggedProfileLink.addEventListener(
+    "click",
+    function(event) {
+
+        if (!currentUser) {
+
+            event.preventDefault();
+
+            return;
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PLAY BUTTON
+   ========================================================= */
+
+playButton.addEventListener(
+    "click",
+    function() {
+
+        if (!currentUser) {
+
+            showLoginMessage(
+                "You must be logged in to play ROBLOX."
+            );
+
+            return;
+        }
+
+
+        /*
+         * Здесь можно поставить настоящий URL игры.
+         *
+         * Например:
+         *
+         * window.location.href = "play.html";
+         *
+         * Пока открываем страницу игры.
+         */
+
+        window.location.href =
+            "play.html";
+
+    }
+);
+
+
+/* =========================================================
+   ESCAPE HTML
+   ========================================================= */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+}
+
+
+/* =========================================================
+   AUTH STATE LISTENER
+   ========================================================= */
+
+db.auth.onAuthStateChange(
+    async function(event, session) {
+
+        console.log(
+            "Auth event:",
+            event
+        );
+
+
+        if (session && session.user) {
+
+            /*
+             * setTimeout нужен, чтобы не делать
+             * лишние Supabase запросы прямо внутри
+             * auth callback.
+             */
+
+            setTimeout(
+                function() {
+
+                    updateAuthUI(
+                        session.user
+                    );
+
+                },
+                0
+            );
+
+        } else {
+
+            updateLoggedOutUI();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CHECK CURRENT SESSION
+   ========================================================= */
+
+async function checkSession() {
+
+    try {
+
+        const {
+            data,
+            error
+        } = await db.auth.getSession();
+
+
+        if (error) {
+
+            console.error(error);
+
+            updateLoggedOutUI();
+
+            return;
+        }
+
+
+        if (
+            data &&
+            data.session &&
+            data.session.user
+        ) {
+
+            await updateAuthUI(
+                data.session.user
+            );
+
+        } else {
+
+            updateLoggedOutUI();
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        updateLoggedOutUI();
+
+    }
+
+}
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+checkSession();
+
+
+</script>
+
+</body>
+</html>
