@@ -1,0 +1,3799 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ROBLOX Forums - 2011</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: #333;
+}
+
+body {
+
+    background-image:
+        url(
+            'https://file.garden/akkSjhU5tXKtizxV/null_plainsky512_ft.jpg'
+        );
+
+    background-repeat: no-repeat;
+
+    background-position:
+        left top;
+
+    background-attachment: fixed;
+
+    background-size: cover;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+#page {
+
+    width: 980px;
+
+    margin:
+        0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+#header {
+
+    height: 100px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-left:
+        1px solid rgba(255,255,255,.5);
+
+    border-right:
+        1px solid rgba(255,255,255,.5);
+}
+
+
+/* =========================================================
+   HEADER LOGO
+========================================================= */
+
+#iqmhcr {
+
+    position: absolute;
+
+    top: -20px;
+
+    right: -250px;
+
+    width: 500px;
+
+    height: 110px;
+
+    object-fit: contain;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ACCOUNT
+========================================================= */
+
+#accountArea {
+
+    position: absolute;
+
+    left: 10px;
+
+    top: 43px;
+
+    z-index: 5;
+}
+
+#accountArea button {
+
+    background-image:
+        linear-gradient(
+            rgb(255,255,255),
+            rgb(215,215,215)
+        );
+
+    border:
+        1px solid rgb(119,119,119);
+
+    padding:
+        3px 10px;
+
+    font-size: 10px;
+
+    color: #333;
+
+    cursor: pointer;
+}
+
+#accountArea button:hover {
+
+    background: white;
+}
+
+#welcome {
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+#nav {
+
+    height: 30px;
+
+    background-image:
+        linear-gradient(
+            rgb(75,155,229),
+            rgb(20,101,182)
+        );
+
+    border:
+        1px solid rgb(13,76,145);
+
+    box-shadow:
+        rgba(255,255,255,.4)
+        0 1px inset;
+}
+
+#nav a {
+
+    display: inline-block;
+
+    height: 28px;
+
+    padding:
+        7px 12px 0;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-right:
+        1px solid rgba(0,0,0,.2);
+
+    text-shadow:
+        rgb(23,81,138)
+        1px 1px;
+}
+
+#nav a:hover,
+#nav a.active {
+
+    background-image:
+        linear-gradient(
+            rgb(114,180,237),
+            rgb(36,117,194)
+        );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+#content {
+
+    margin-top: 7px;
+
+    background-color:
+        rgb(238,238,238);
+
+    border:
+        1px solid rgb(170,170,170);
+
+    padding: 6px;
+}
+
+.columns {
+
+    display: grid;
+
+    grid-template-columns:
+        180px
+        1fr
+        190px;
+
+    row-gap: 7px;
+
+    column-gap: 7px;
+}
+
+
+/* =========================================================
+   BOX
+========================================================= */
+
+.box {
+
+    background-color:
+        rgb(255,255,255);
+
+    border:
+        1px solid rgb(187,187,187);
+
+    margin-bottom: 7px;
+}
+
+.box-title {
+
+    height: 28px;
+
+    padding:
+        7px 8px;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    background-image:
+        linear-gradient(
+            rgb(85,85,85),
+            rgb(41,41,41)
+        );
+
+    border-bottom:
+        1px solid rgb(17,17,17);
+}
+
+.box-body {
+
+    padding: 8px;
+}
+
+
+/* =========================================================
+   FORUM LINKS
+========================================================= */
+
+.forumLink {
+
+    display: block;
+
+    padding:
+        7px 5px;
+
+    color:
+        rgb(18,98,162);
+
+    text-decoration: none;
+
+    border-bottom:
+        1px solid #ddd;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.forumLink:hover {
+
+    background:
+        #e8f3fa;
+}
+
+.forumLink.selected {
+
+    background:
+        #d4eaf8;
+
+    color:
+        #c22;
+}
+
+
+/* =========================================================
+   GENERAL LINKS
+========================================================= */
+
+.box-body a {
+
+    color:
+        rgb(18,98,162);
+
+    text-decoration: none;
+}
+
+.box-body a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FORUM HEADER
+========================================================= */
+
+.forumHeader {
+
+    height: 30px;
+
+    padding:
+        7px 9px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    background-image:
+        linear-gradient(
+            rgb(85,85,85),
+            rgb(41,41,41)
+        );
+
+    border-bottom:
+        1px solid #111;
+}
+
+.forumDescription {
+
+    padding: 8px;
+
+    background:
+        #f4f4f4;
+
+    border-bottom:
+        1px solid #ccc;
+
+    color:
+        #666;
+}
+
+
+/* =========================================================
+   NEW THREAD
+========================================================= */
+
+.newThread {
+
+    display: inline-block;
+
+    margin:
+        7px 8px;
+
+    padding:
+        5px 12px;
+
+    background-image:
+        linear-gradient(
+            rgb(156,232,93),
+            rgb(56,156,22)
+        );
+
+    border:
+        1px solid rgb(40,114,14);
+
+    color: white !important;
+
+    font-weight: bold;
+
+    text-decoration: none !important;
+
+    text-shadow:
+        rgb(36,107,13)
+        1px 1px;
+
+    cursor: pointer;
+}
+
+.newThread:hover {
+
+    background-image:
+        linear-gradient(
+            rgb(170,240,105),
+            rgb(68,170,28)
+        );
+}
+
+
+/* =========================================================
+   THREAD LIST
+========================================================= */
+
+.threadHeader {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        65px
+        65px
+        125px;
+
+    background-image:
+        linear-gradient(
+            rgb(85,85,85),
+            rgb(41,41,41)
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    padding: 7px;
+
+    border-top:
+        1px solid #222;
+}
+
+.thread {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        65px
+        65px
+        125px;
+
+    padding:
+        9px 7px;
+
+    background:
+        white;
+
+    border-bottom:
+        1px solid #ddd;
+}
+
+.thread:hover {
+
+    background:
+        #f1f7fb;
+}
+
+.threadTitle {
+
+    color:
+        #1262a2;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+}
+
+.threadTitle:hover {
+
+    text-decoration:
+        underline;
+}
+
+.threadInfo {
+
+    color:
+        #888;
+
+    font-size:
+        10px;
+
+    margin-top:
+        3px;
+}
+
+.center {
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   THREAD PAGE
+========================================================= */
+
+.threadPageTitle {
+
+    background-image:
+        linear-gradient(
+            rgb(85,85,85),
+            rgb(41,41,41)
+        );
+
+    color:
+        white;
+
+    font-size:
+        14px;
+
+    font-weight:
+        bold;
+
+    padding:
+        7px 9px;
+}
+
+
+/* =========================================================
+   POSTS
+========================================================= */
+
+.post {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        120px
+        1fr;
+
+    border:
+        1px solid #bbb;
+
+    border-top:
+        0;
+
+    background:
+        white;
+}
+
+.postUser {
+
+    padding:
+        10px;
+
+    text-align:
+        center;
+
+    background:
+        #e9eef2;
+
+    border-right:
+        1px solid #bbb;
+}
+
+.avatar {
+
+    width:
+        80px;
+
+    height:
+        80px;
+
+    margin:
+        0 auto 7px;
+
+    background:
+        #ddd;
+
+    border:
+        1px solid #aaa;
+
+    position:
+        relative;
+}
+
+.avatarHead {
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    position:
+        absolute;
+
+    left:
+        24px;
+
+    top:
+        9px;
+
+    background:
+        #eac18a;
+
+    border:
+        1px solid #9b754d;
+}
+
+.avatarBody {
+
+    width:
+        38px;
+
+    height:
+        30px;
+
+    position:
+        absolute;
+
+    left:
+        20px;
+
+    top:
+        39px;
+
+    background:
+        #3e75b5;
+
+    border:
+        1px solid #294e76;
+}
+
+.postUsername {
+
+    color:
+        #1262a2;
+
+    font-weight:
+        bold;
+
+    text-decoration:
+        none;
+
+    cursor:
+        pointer;
+}
+
+.postUsername:hover {
+
+    text-decoration:
+        underline;
+}
+
+.postContent {
+
+    padding:
+        10px;
+
+    min-height:
+        130px;
+}
+
+.postDate {
+
+    color:
+        #888;
+
+    font-size:
+        10px;
+
+    border-bottom:
+        1px solid #ddd;
+
+    padding-bottom:
+        5px;
+
+    margin-bottom:
+        10px;
+}
+
+.postText {
+
+    white-space:
+        pre-wrap;
+
+    overflow-wrap:
+        anywhere;
+}
+
+.edited {
+
+    color:
+        #999;
+}
+
+
+/* =========================================================
+   REPLY
+========================================================= */
+
+.replyBox {
+
+    margin-top:
+        7px;
+
+    padding:
+        10px;
+
+    background:
+        #eee;
+
+    border:
+        1px solid #aaa;
+}
+
+textarea {
+
+    width:
+        100%;
+
+    height:
+        100px;
+
+    resize:
+        vertical;
+
+    border:
+        1px solid #aaa;
+
+    font-family:
+        Arial;
+
+    font-size:
+        12px;
+
+    padding:
+        5px;
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.formLabel {
+
+    display:
+        block;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        4px;
+}
+
+.input {
+
+    width:
+        100%;
+
+    height:
+        23px;
+
+    border:
+        1px solid rgb(170,170,170);
+
+    margin-top:
+        3px;
+
+    margin-bottom:
+        7px;
+
+    padding:
+        3px;
+
+    font-size:
+        11px;
+}
+
+.button {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    padding:
+        5px;
+
+    margin-top:
+        5px;
+
+    border:
+        1px solid rgb(119,119,119);
+
+    background-image:
+        linear-gradient(
+            rgb(250,250,250),
+            rgb(207,207,207)
+        );
+
+    color:
+        rgb(51,51,51);
+
+    font-weight:
+        bold;
+
+    text-align:
+        center;
+
+    cursor:
+        pointer;
+}
+
+.button:hover {
+
+    background:
+        white;
+}
+
+
+/* =========================================================
+   PLAY BUTTON
+========================================================= */
+
+.big-play {
+
+    width:
+        145px;
+
+    height:
+        145px;
+
+    margin:
+        0 auto;
+
+    border-radius:
+        50%;
+
+    background-image:
+        radial-gradient(
+            circle at 40% 30%,
+            rgb(155,239,99),
+            rgb(55,165,14) 60%,
+            rgb(36,116,0)
+        );
+
+    border:
+        5px solid rgb(41,123,18);
+
+    box-shadow:
+        rgb(139,220,87)
+        0 0 0 3px inset,
+        rgba(0,0,0,.4)
+        0 2px 4px;
+
+    color:
+        white;
+
+    font-size:
+        31px;
+
+    line-height:
+        30px;
+
+    font-weight:
+        bold;
+
+    text-align:
+        center;
+
+    padding-top:
+        37px;
+
+    text-shadow:
+        rgb(40,112,13)
+        2px 2px;
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.stat {
+
+    border-bottom:
+        1px solid #ddd;
+
+    padding:
+        6px 3px;
+}
+
+.stat strong {
+
+    color:
+        rgb(204,34,34);
+}
+
+.news {
+
+    margin:
+        0;
+
+    padding-left:
+        16px;
+}
+
+.news li {
+
+    margin-bottom:
+        5px;
+}
+
+.news a {
+
+    color:
+        rgb(18,98,162);
+
+    text-decoration:
+        none;
+}
+
+.news a:hover {
+
+    text-decoration:
+        underline;
+}
+
+
+/* =========================================================
+   AUTH
+========================================================= */
+
+#authOverlay {
+
+    display:
+        none;
+
+    position:
+        fixed;
+
+    z-index:
+        9999;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    background:
+        rgba(0,0,0,.45);
+}
+
+.auth-window {
+
+    width:
+        360px;
+
+    margin:
+        100px auto;
+
+    background:
+        rgb(238,238,238);
+
+    border:
+        1px solid rgb(85,85,85);
+
+    box-shadow:
+        rgba(0,0,0,.5)
+        3px 3px 10px;
+}
+
+.auth-title {
+
+    height:
+        30px;
+
+    padding:
+        7px 9px;
+
+    color:
+        white;
+
+    font-size:
+        13px;
+
+    font-weight:
+        bold;
+
+    background-image:
+        linear-gradient(
+            rgb(85,85,85),
+            rgb(41,41,41)
+        );
+}
+
+.auth-body {
+
+    padding:
+        12px;
+}
+
+.auth-body label {
+
+    display:
+        block;
+
+    font-weight:
+        bold;
+
+    margin-top:
+        5px;
+}
+
+.auth-body input {
+
+    width:
+        100%;
+
+    height:
+        25px;
+
+    border:
+        1px solid rgb(170,170,170);
+
+    margin-top:
+        4px;
+
+    margin-bottom:
+        8px;
+
+    padding:
+        4px;
+
+    font-size:
+        11px;
+}
+
+.auth-message {
+
+    margin-top:
+        8px;
+
+    color:
+        rgb(187,34,34);
+}
+
+.auth-switch {
+
+    margin-top:
+        10px;
+
+    color:
+        rgb(18,98,162);
+
+    cursor:
+        pointer;
+
+    text-decoration:
+        underline;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+#footer {
+
+    margin-top:
+        10px;
+
+    padding:
+        15px;
+
+    background:
+        rgb(238,238,238);
+
+    border:
+        1px solid rgb(170,170,170);
+
+    text-align:
+        center;
+
+    color:
+        rgb(102,102,102);
+
+    font-size:
+        11px;
+}
+
+#footer a {
+
+    color:
+        rgb(40,105,162);
+
+    text-decoration:
+        none;
+
+    margin:
+        0 5px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px) {
+
+    #page {
+
+        width:
+            96%;
+    }
+}
+
+@media(max-width:700px) {
+
+    .columns {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    #nav {
+
+        height:
+            auto;
+    }
+
+    #nav a {
+
+        padding-left:
+            8px;
+
+        padding-right:
+            8px;
+    }
+
+    .threadHeader,
+    .thread {
+
+        grid-template-columns:
+            1fr
+            55px
+            55px
+            90px;
+    }
+
+    #iqmhcr {
+
+        right:
+            -150px;
+
+        width:
+            400px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="page">
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header id="header">
+
+    <div id="accountArea"></div>
+
+    <img
+        id="iqmhcr"
+        src="https://file.garden/akkSjhU5tXKtizxV/absolute2.png"
+        alt="ROBLOX">
+
+</header>
+
+
+<!-- =========================================================
+     NAV
+========================================================= -->
+
+<nav id="nav">
+
+    <a href="index.html">
+        My ROBLOX
+    </a>
+
+    <a href="#">
+        Games
+    </a>
+
+    <a href="#">
+        People
+    </a>
+
+    <a href="#">
+        Contests
+    </a>
+
+    <a
+        href="forum.html"
+        class="active">
+
+        Forum
+
+    </a>
+
+    <a href="#">
+        Help
+    </a>
+
+</nav>
+
+
+<!-- =========================================================
+     CONTENT
+========================================================= -->
+
+<main id="content">
+
+<div class="columns">
+
+
+<!-- =========================================================
+     LEFT
+========================================================= -->
+
+<aside>
+
+<div class="box">
+
+    <div class="box-title">
+        Forum
+    </div>
+
+    <div class="box-body">
+
+        <a
+            class="forumLink"
+            onclick="openForum('ROBLOX Talk')">
+
+            ROBLOX Talk
+
+        </a>
+
+        <a
+            class="forumLink"
+            onclick="openForum('Game Design')">
+
+            Game Design
+
+        </a>
+
+        <a
+            class="forumLink"
+            onclick="openForum('Scripting')">
+
+            Scripting
+
+        </a>
+
+        <a
+            class="forumLink"
+            onclick="openForum('Help')">
+
+            Help
+
+        </a>
+
+        <a
+            class="forumLink"
+            onclick="openForum('Game Discussion')">
+
+            Game Discussion
+
+        </a>
+
+        <a
+            class="forumLink"
+            onclick="openForum('Off Topic')">
+
+            Off Topic
+
+        </a>
+
+        <a
+            class="forumLink"
+            onclick="openForum('Clans & Guilds')">
+
+            Clans & Guilds
+
+        </a>
+
+        <a
+            class="forumLink"
+            onclick="openForum('Contests')">
+
+            Contests
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="box">
+
+    <div class="box-title">
+        My ROBLOX
+    </div>
+
+    <div class="box-body">
+
+        <a
+            href="#"
+            onclick="
+                openMyProfile();
+                return false;
+            ">
+
+            My Profile
+
+        </a>
+
+        <br><br>
+
+        <a href="#">
+            My Games
+        </a>
+
+        <br><br>
+
+        <a href="#">
+            My Friends
+        </a>
+
+        <br><br>
+
+        <a href="#">
+            My Stuff
+        </a>
+
+        <br><br>
+
+        <a href="#">
+            My Groups
+        </a>
+
+    </div>
+
+</div>
+
+</aside>
+
+
+<!-- =========================================================
+     CENTER
+========================================================= -->
+
+<section>
+
+
+<!-- FORUM PAGE -->
+
+<div id="forumPage">
+
+<div class="box">
+
+    <div class="forumHeader">
+
+        ROBLOX Forums
+
+    </div>
+
+    <div class="forumDescription">
+
+        Welcome to the ROBLOX Forums!
+        Talk about ROBLOX, games,
+        scripting and more.
+
+    </div>
+
+</div>
+
+
+<div class="box">
+
+    <div
+        class="box-title"
+        id="currentForumTitle">
+
+        Select a forum
+
+    </div>
+
+    <div id="topicArea">
+
+        <div
+            style="
+                padding:20px;
+                text-align:center;
+                color:#777;
+            ">
+
+            Select a forum from the left.
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- THREAD PAGE -->
+
+<div
+    id="threadPage"
+    style="display:none;">
+
+    <div class="box">
+
+        <div
+            class="threadPageTitle"
+            id="threadTitleDisplay">
+        </div>
+
+        <div id="posts"></div>
+
+    </div>
+
+
+    <div class="replyBox">
+
+        <b>
+            Reply to this thread
+        </b>
+
+        <br><br>
+
+        <textarea
+            id="replyText"
+            placeholder="Write your reply...">
+        </textarea>
+
+        <br><br>
+
+        <button
+            class="button"
+            onclick="postReply()">
+
+            Post Reply
+
+        </button>
+
+        <button
+            class="button"
+            onclick="backToForum()">
+
+            Back to Forum
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- CREATE THREAD -->
+
+<div
+    id="createPage"
+    style="display:none;">
+
+    <div class="box">
+
+        <div class="box-title">
+
+            Create New Thread
+
+        </div>
+
+        <div class="box-body">
+
+            <label class="formLabel">
+
+                Title
+
+            </label>
+
+            <input
+                id="threadTitle"
+                class="input"
+                type="text"
+                maxlength="100"
+                placeholder="Thread title">
+
+
+            <label class="formLabel">
+
+                Message
+
+            </label>
+
+            <textarea
+                id="threadMessage"
+                maxlength="5000"
+                placeholder="Write your message...">
+            </textarea>
+
+            <br><br>
+
+            <button
+                class="button"
+                onclick="postThread()">
+
+                Create Thread
+
+            </button>
+
+            <button
+                class="button"
+                onclick="backToForum()">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RIGHT
+========================================================= -->
+
+<aside>
+
+
+<div class="box">
+
+    <div class="box-title">
+
+        Play ROBLOX
+
+    </div>
+
+    <div class="box-body">
+
+        <div
+            class="big-play"
+            onclick="
+                window.location.href='index.html'
+            ">
+
+            PLAY
+            <br>
+            NOW
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="box">
+
+    <div class="box-title">
+
+        Roblox Stats
+
+    </div>
+
+    <div class="box-body">
+
+        <div class="stat">
+
+            Players Online:
+
+            <strong>
+                12,642
+            </strong>
+
+        </div>
+
+        <div class="stat">
+
+            Games:
+
+            <strong>
+                18,531
+            </strong>
+
+        </div>
+
+        <div class="stat">
+
+            Members:
+
+            <strong>
+                4,201,923
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="box">
+
+    <div class="box-title">
+
+        Forum Rules
+
+    </div>
+
+    <div class="box-body">
+
+        <b>1.</b>
+        Be respectful.
+
+        <br><br>
+
+        <b>2.</b>
+        No spam.
+
+        <br><br>
+
+        <b>3.</b>
+        Don't post inappropriate content.
+
+        <br><br>
+
+        <b>4.</b>
+        Stay on topic.
+
+    </div>
+
+</div>
+
+
+<div class="box">
+
+    <div class="box-title">
+
+        Roblox News
+
+    </div>
+
+    <div class="box-body">
+
+        <ul class="news">
+
+            <li>
+                <a href="#">
+                    New ROBLOX update!
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Builders Club news
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Contest winners
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    New catalog items
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</aside>
+
+</div>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer id="footer">
+
+    <a href="#">
+        About Us
+    </a>
+
+    <a href="#">
+        Jobs
+    </a>
+
+    <a href="#">
+        Terms
+    </a>
+
+    <a href="#">
+        Privacy
+    </a>
+
+    <a href="#">
+        Contact
+    </a>
+
+    <a href="#">
+        Help
+    </a>
+
+    <br><br>
+
+    © 2026 Jonny's Absolute Entertainmant.
+    All Rights Reserved.
+
+</footer>
+
+</div>
+
+
+<!-- =========================================================
+     AUTH WINDOW
+========================================================= -->
+
+<div id="authOverlay">
+
+<div class="auth-window">
+
+    <div
+        id="authTitle"
+        class="auth-title">
+
+        Login
+
+    </div>
+
+    <div class="auth-body">
+
+        <label
+            id="usernameLabel"
+            style="display:none;">
+
+            Username
+
+        </label>
+
+        <input
+            id="authUsername"
+            style="display:none;"
+            type="text"
+            maxlength="20"
+            placeholder="Username">
+
+
+        <label>
+
+            Email
+
+        </label>
+
+        <input
+            id="authEmail"
+            type="email"
+            placeholder="Email">
+
+
+        <label>
+
+            Password
+
+        </label>
+
+        <input
+            id="authPassword"
+            type="password"
+            placeholder="Password">
+
+
+        <div
+            id="authError"
+            class="auth-message"
+            style="display:none;">
+        </div>
+
+
+        <button
+            class="button"
+            onclick="submitAuth()"
+            id="authSubmit">
+
+            Login
+
+        </button>
+
+
+        <button
+            class="button"
+            onclick="closeAuth()">
+
+            Cancel
+
+        </button>
+
+
+        <div
+            class="auth-switch"
+            onclick="switchAuth()"
+            id="authSwitch">
+
+            Don't have an account?
+            Register
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     SUPABASE
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   SUPABASE
+========================================================= */
+
+const SUPABASE_URL =
+    "https://kczmmvnkbrzgjmrfimpk.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_-LpvaJw7Z4Y323hhPZfxbA_OfMtyq2-";
+
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let currentForum = "";
+
+let currentThread = null;
+
+let authMode = "login";
+
+
+/* =========================================================
+   SAFE DOM
+========================================================= */
+
+function getElement(id) {
+
+    return document.getElementById(id);
+
+}
+
+
+/* =========================================================
+   AUTH
+========================================================= */
+
+function openLogin() {
+
+    const overlay =
+        getElement("authOverlay");
+
+    if (!overlay)
+        return;
+
+    authMode = "login";
+
+    overlay.style.display = "block";
+
+    updateAuthWindow();
+
+}
+
+
+function openRegister() {
+
+    const overlay =
+        getElement("authOverlay");
+
+    if (!overlay)
+        return;
+
+    authMode = "register";
+
+    overlay.style.display = "block";
+
+    updateAuthWindow();
+
+}
+
+
+function closeAuth() {
+
+    const overlay =
+        getElement("authOverlay");
+
+    if (!overlay)
+        return;
+
+    overlay.style.display = "none";
+
+}
+
+
+function switchAuth() {
+
+    authMode =
+        authMode === "login"
+            ? "register"
+            : "login";
+
+    updateAuthWindow();
+
+}
+
+
+function updateAuthWindow() {
+
+    const title =
+        getElement("authTitle");
+
+    const submit =
+        getElement("authSubmit");
+
+    const username =
+        getElement("authUsername");
+
+    const usernameLabel =
+        getElement("usernameLabel");
+
+    const switchText =
+        getElement("authSwitch");
+
+    if (
+        !title ||
+        !submit ||
+        !username ||
+        !usernameLabel ||
+        !switchText
+    ) {
+
+        return;
+
+    }
+
+
+    const error =
+        getElement("authError");
+
+    if (error) {
+
+        error.style.display = "none";
+
+        error.textContent = "";
+
+    }
+
+
+    if (authMode === "login") {
+
+        title.textContent = "Login";
+
+        submit.textContent = "Login";
+
+        username.style.display = "none";
+
+        usernameLabel.style.display = "none";
+
+        switchText.textContent =
+            "Don't have an account? Register";
+
+    } else {
+
+        title.textContent = "Register";
+
+        submit.textContent = "Register";
+
+        username.style.display = "block";
+
+        usernameLabel.style.display = "block";
+
+        switchText.textContent =
+            "Already have an account? Login";
+
+    }
+
+}
+
+
+/* =========================================================
+   AUTH SUBMIT
+========================================================= */
+
+async function submitAuth() {
+
+    const emailElement =
+        getElement("authEmail");
+
+    const passwordElement =
+        getElement("authPassword");
+
+    const usernameElement =
+        getElement("authUsername");
+
+    if (
+        !emailElement ||
+        !passwordElement ||
+        !usernameElement
+    ) {
+
+        return;
+
+    }
+
+
+    const email =
+        emailElement.value.trim();
+
+    const password =
+        passwordElement.value;
+
+    const username =
+        usernameElement.value.trim();
+
+
+    if (!email || !password) {
+
+        showAuthError(
+            "Please enter your email and password."
+        );
+
+        return;
+
+    }
+
+
+    if (authMode === "register") {
+
+        if (!username) {
+
+            showAuthError(
+                "Please enter a username."
+            );
+
+            return;
+
+        }
+
+
+        if (
+            !/^[A-Za-z0-9_]{3,20}$/.test(username)
+        ) {
+
+            showAuthError(
+                "Username must contain 3-20 letters, numbers or underscores."
+            );
+
+            return;
+
+        }
+
+
+        if (password.length < 6) {
+
+            showAuthError(
+                "Password must be at least 6 characters."
+            );
+
+            return;
+
+        }
+
+
+        const usernameCheck =
+            await supabaseClient
+            .from("profiles")
+            .select("id")
+            .eq("username", username)
+            .maybeSingle();
+
+
+        if (usernameCheck.data) {
+
+            showAuthError(
+                "That username is already taken."
+            );
+
+            return;
+
+        }
+
+
+        const result =
+            await supabaseClient
+            .auth
+            .signUp({
+
+                email:
+                    email,
+
+                password:
+                    password,
+
+                options: {
+
+                    data: {
+
+                        username:
+                            username
+
+                    },
+
+                    emailRedirectTo:
+                        window.location.origin +
+                        window.location.pathname
+
+                }
+
+            });
+
+
+        const data =
+            result.data;
+
+        const error =
+            result.error;
+
+
+        if (error) {
+
+            showAuthError(
+                error.message
+            );
+
+            return;
+
+        }
+
+
+        if (!data || !data.user) {
+
+            showAuthError(
+                "Could not create account."
+            );
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "robloxUsername",
+            username
+        );
+
+
+        try {
+
+            await supabaseClient
+                .from("profiles")
+                .upsert({
+
+                    id:
+                        data.user.id,
+
+                    username:
+                        username,
+
+                    about:
+                        ""
+
+                }, {
+
+                    onConflict:
+                        "id"
+
+                });
+
+        } catch (e) {
+
+            console.log(
+                "Profile creation:",
+                e
+            );
+
+        }
+
+
+        if (!data.session) {
+
+            closeAuth();
+
+            alert(
+                "Account created! Please check your email and confirm your account before logging in."
+            );
+
+            return;
+
+        }
+
+
+        closeAuth();
+
+        await updateAccountArea();
+
+        return;
+
+    }
+
+
+    /* LOGIN */
+
+    const result =
+        await supabaseClient
+        .auth
+        .signInWithPassword({
+
+            email:
+                email,
+
+            password:
+                password
+
+        });
+
+
+    const data =
+        result.data;
+
+    const error =
+        result.error;
+
+
+    if (error) {
+
+        showAuthError(
+            error.message
+        );
+
+        return;
+
+    }
+
+
+    if (!data || !data.user) {
+
+        showAuthError(
+            "Login failed."
+        );
+
+        return;
+
+    }
+
+
+    try {
+
+        const profileResult =
+            await supabaseClient
+            .from("profiles")
+            .select("username")
+            .eq(
+                "id",
+                data.user.id
+            )
+            .maybeSingle();
+
+
+        if (
+            profileResult.data &&
+            profileResult.data.username
+        ) {
+
+            localStorage.setItem(
+                "robloxUsername",
+                profileResult.data.username
+            );
+
+        }
+
+    } catch (e) {
+
+        console.log(
+            "Profile loading:",
+            e
+        );
+
+    }
+
+
+    closeAuth();
+
+    await updateAccountArea();
+
+}
+
+
+/* =========================================================
+   AUTH ERROR
+========================================================= */
+
+function showAuthError(message) {
+
+    const box =
+        getElement("authError");
+
+    if (!box)
+        return;
+
+    box.textContent =
+        String(
+            message ||
+            "Unknown error."
+        );
+
+    box.style.display =
+        "block";
+
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+async function logout() {
+
+    await supabaseClient
+        .auth
+        .signOut();
+
+    localStorage.removeItem(
+        "robloxUsername"
+    );
+
+    await updateAccountArea();
+
+}
+
+
+/* =========================================================
+   ACCOUNT AREA
+========================================================= */
+
+async function updateAccountArea() {
+
+    const area =
+        getElement("accountArea");
+
+    if (!area)
+        return;
+
+
+    try {
+
+        const result =
+            await supabaseClient
+            .auth
+            .getUser();
+
+        const user =
+            result.data?.user || null;
+
+
+        if (!user) {
+
+            area.innerHTML = `
+
+                <button onclick="openLogin()">
+                    Login
+                </button>
+
+                <button onclick="openRegister()">
+                    Register
+                </button>
+
+            `;
+
+            return;
+
+        }
+
+
+        let username =
+            localStorage.getItem(
+                "robloxUsername"
+            );
+
+
+        if (!username) {
+
+            try {
+
+                const profileResult =
+                    await supabaseClient
+                    .from("profiles")
+                    .select("username")
+                    .eq(
+                        "id",
+                        user.id
+                    )
+                    .maybeSingle();
+
+
+                if (
+                    profileResult.data &&
+                    profileResult.data.username
+                ) {
+
+                    username =
+                        profileResult.data.username;
+
+                    localStorage.setItem(
+                        "robloxUsername",
+                        username
+                    );
+
+                }
+
+            } catch (e) {
+
+                console.log(
+                    "Could not load profile:",
+                    e
+                );
+
+            }
+
+        }
+
+
+        username =
+            username ||
+            user.user_metadata?.username ||
+            user.email?.split("@")[0] ||
+            "User";
+
+
+        area.innerHTML = `
+
+            <span id="welcome">
+
+                Welcome,
+                ${escapeHTML(username)}
+
+            </span>
+
+            <button
+                onclick="openMyProfile()"
+                style="margin-left:6px;">
+
+                Profile
+
+            </button>
+
+            <button
+                onclick="logout()"
+                style="margin-left:4px;">
+
+                Logout
+
+            </button>
+
+        `;
+
+    } catch (error) {
+
+        console.error(
+            "updateAccountArea error:",
+            error
+        );
+
+        area.innerHTML = `
+
+            <button onclick="openLogin()">
+                Login
+            </button>
+
+            <button onclick="openRegister()">
+                Register
+            </button>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   MY PROFILE
+========================================================= */
+
+function openMyProfile() {
+
+    const username =
+        localStorage.getItem(
+            "robloxUsername"
+        );
+
+
+    if (!username) {
+
+        openLogin();
+
+        return;
+
+    }
+
+
+    window.location.href =
+        "profile.html?username=" +
+        encodeURIComponent(username);
+
+}
+
+
+/* =========================================================
+   OPEN PROFILE
+========================================================= */
+
+function openProfile(username) {
+
+    if (!username)
+        return;
+
+
+    window.location.href =
+        "profile.html?username=" +
+        encodeURIComponent(username);
+
+}
+
+
+/* =========================================================
+   OPEN FORUM
+========================================================= */
+
+async function openForum(name) {
+
+    if (!name)
+        return;
+
+
+    currentForum =
+        String(name);
+
+
+    const forumPage =
+        getElement("forumPage");
+
+    const threadPage =
+        getElement("threadPage");
+
+    const createPage =
+        getElement("createPage");
+
+    const title =
+        getElement("currentForumTitle");
+
+
+    if (forumPage)
+        forumPage.style.display = "block";
+
+    if (threadPage)
+        threadPage.style.display = "none";
+
+    if (createPage)
+        createPage.style.display = "none";
+
+    if (title)
+        title.textContent =
+            currentForum;
+
+
+    document
+        .querySelectorAll(".forumLink")
+        .forEach(link => {
+
+            link.classList.toggle(
+                "selected",
+                link.textContent.trim() ===
+                currentForum
+            );
+
+        });
+
+
+    await loadThreads();
+
+}
+
+
+/* =========================================================
+   LOAD THREADS
+========================================================= */
+
+async function loadThreads() {
+
+    const area =
+        getElement("topicArea");
+
+    if (!area)
+        return;
+
+
+    area.innerHTML = `
+
+        <div style="
+            padding:15px;
+            text-align:center;
+            color:#777;
+        ">
+
+            Loading...
+
+        </div>
+
+    `;
+
+
+    const result =
+        await supabaseClient
+        .from("threads")
+        .select("*")
+        .eq(
+            "forum",
+            currentForum
+        )
+        .order(
+            "created_at",
+            {
+                ascending:
+                    false
+            }
+        );
+
+
+    if (result.error) {
+
+        area.innerHTML = `
+
+            <div style="
+                padding:10px;
+                color:#900;
+            ">
+
+                ${escapeHTML(
+                    result.error.message
+                )}
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const threads =
+        result.data || [];
+
+
+    area.innerHTML = `
+
+        <a
+            class="newThread"
+            href="#"
+            onclick="
+                createThread();
+                return false;
+            ">
+
+            New Thread
+
+        </a>
+
+        <div class="threadHeader">
+
+            <div>
+                Topic
+            </div>
+
+            <div class="center">
+                Replies
+            </div>
+
+            <div class="center">
+                Views
+            </div>
+
+            <div>
+                Last Post
+            </div>
+
+        </div>
+
+    `;
+
+
+    if (!threads.length) {
+
+        area.innerHTML += `
+
+            <div style="
+                padding:20px;
+                text-align:center;
+                background:white;
+                color:#777;
+            ">
+
+                No threads in this forum.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    for (const thread of threads) {
+
+        const div =
+            document.createElement(
+                "div"
+            );
+
+        div.className =
+            "thread";
+
+
+        const title =
+            thread.title ||
+            "Untitled";
+
+        const author =
+            thread.author ||
+            "Guest";
+
+        const views =
+            Number(
+                thread.views ||
+                0
+            );
+
+
+        let replies =
+            0;
+
+
+        try {
+
+            const replyResult =
+                await supabaseClient
+                .from("posts")
+                .select(
+                    "id",
+                    {
+                        count:
+                            "exact",
+                        head:
+                            true
+                    }
+                )
+                .eq(
+                    "thread_id",
+                    Number(thread.id)
+                );
+
+
+            replies =
+                Number(
+                    replyResult.count ||
+                    0
+                );
+
+        } catch (e) {
+
+            replies =
+                0;
+
+        }
+
+
+        div.innerHTML = `
+
+            <div>
+
+                <div
+                    class="threadTitle"
+                    onclick="
+                        openThread(
+                            ${Number(thread.id)}
+                        )
+                    ">
+
+                    ${escapeHTML(title)}
+
+                </div>
+
+                <div class="threadInfo">
+
+                    by
+                    ${escapeHTML(author)}
+
+                </div>
+
+            </div>
+
+            <div class="center">
+
+                ${replies}
+
+            </div>
+
+            <div class="center">
+
+                ${views}
+
+            </div>
+
+            <div>
+
+                ${formatDate(
+                    thread.created_at
+                )}
+
+            </div>
+
+        `;
+
+
+        area.appendChild(
+            div
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   OPEN THREAD
+========================================================= */
+
+async function openThread(id) {
+
+    if (
+        id === null ||
+        id === undefined ||
+        id === "" ||
+        String(id) === "null" ||
+        String(id) === "undefined"
+    ) {
+
+        console.error(
+            "Invalid thread ID:",
+            id
+        );
+
+        return;
+
+    }
+
+
+    const numericId =
+        Number(id);
+
+
+    if (
+        !Number.isInteger(numericId) ||
+        numericId <= 0
+    ) {
+
+        console.error(
+            "Invalid thread ID:",
+            id
+        );
+
+        return;
+
+    }
+
+
+    currentThread =
+        numericId;
+
+
+    const result =
+        await supabaseClient
+        .from("threads")
+        .select("*")
+        .eq(
+            "id",
+            numericId
+        )
+        .maybeSingle();
+
+
+    if (result.error) {
+
+        alert(
+            result.error.message
+        );
+
+        return;
+
+    }
+
+
+    const thread =
+        result.data;
+
+
+    if (!thread) {
+
+        alert(
+            "Thread not found."
+        );
+
+        return;
+
+    }
+
+
+    currentForum =
+        thread.forum || "";
+
+
+    const forumPage =
+        getElement("forumPage");
+
+    const createPage =
+        getElement("createPage");
+
+    const threadPage =
+        getElement("threadPage");
+
+    const titleDisplay =
+        getElement("threadTitleDisplay");
+
+
+    if (forumPage)
+        forumPage.style.display =
+            "none";
+
+    if (createPage)
+        createPage.style.display =
+            "none";
+
+    if (threadPage)
+        threadPage.style.display =
+            "block";
+
+
+    if (titleDisplay)
+        titleDisplay.textContent =
+            thread.title ||
+            "Untitled";
+
+
+    await supabaseClient
+        .from("threads")
+        .update({
+
+            views:
+                Number(
+                    thread.views ||
+                    0
+                ) + 1
+
+        })
+        .eq(
+            "id",
+            numericId
+        );
+
+
+    await loadPosts(
+        numericId
+    );
+
+}
+
+
+/* =========================================================
+   LOAD POSTS
+========================================================= */
+
+async function loadPosts(id) {
+
+    const numericId =
+        Number(id);
+
+
+    if (
+        !Number.isInteger(numericId) ||
+        numericId <= 0
+    ) {
+
+        return;
+
+    }
+
+
+    const box =
+        getElement("posts");
+
+
+    if (!box)
+        return;
+
+
+    box.innerHTML = `
+
+        <div style="
+            padding:15px;
+            text-align:center;
+            color:#777;
+        ">
+
+            Loading...
+
+        </div>
+
+    `;
+
+
+    const result =
+        await supabaseClient
+        .from("posts")
+        .select("*")
+        .eq(
+            "thread_id",
+            numericId
+        )
+        .order(
+            "created_at",
+            {
+                ascending:
+                    true
+            }
+        );
+
+
+    if (result.error) {
+
+        box.innerHTML = `
+
+            <div style="
+                padding:10px;
+                color:#900;
+            ">
+
+                ${escapeHTML(
+                    result.error.message
+                )}
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const posts =
+        result.data || [];
+
+
+    box.innerHTML =
+        "";
+
+
+    if (!posts.length) {
+
+        box.innerHTML = `
+
+            <div style="
+                padding:20px;
+                text-align:center;
+                color:#777;
+                background:white;
+            ">
+
+                No posts.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    posts.forEach(
+        post => {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className =
+                "post";
+
+
+            const author =
+                post.author ||
+                "Guest";
+
+
+            const edited =
+                post.updated_at
+                    ? `
+                        <span class="edited">
+                            · Edited
+                        </span>
+                      `
+                    : "";
+
+
+            div.innerHTML = `
+
+                <div class="postUser">
+
+                    <div class="avatar">
+
+                        <div
+                            class="avatarHead">
+                        </div>
+
+                        <div
+                            class="avatarBody">
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="postUsername"
+                        href="
+                            profile.html?username=${
+                                encodeURIComponent(
+                                    author
+                                )
+                            }
+                        ">
+
+                        ${escapeHTML(author)}
+
+                    </a>
+
+
+                    <div style="
+                        margin-top:5px;
+                        color:#888;
+                        font-size:10px;
+                    ">
+
+                        Member
+
+                    </div>
+
+                </div>
+
+
+                <div class="postContent">
+
+                    <div class="postDate">
+
+                        Posted:
+                        ${formatDate(
+                            post.created_at
+                        )}
+
+                        ${edited}
+
+                    </div>
+
+
+                    <div class="postText">
+
+                        ${escapeHTML(
+                            post.text ||
+                            ""
+                        )}
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            box.appendChild(
+                div
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CREATE THREAD
+========================================================= */
+
+async function createThread() {
+
+    const result =
+        await supabaseClient
+        .auth
+        .getUser();
+
+    const user =
+        result.data?.user ||
+        null;
+
+
+    if (!user) {
+
+        openLogin();
+
+        return;
+
+    }
+
+
+    const forumPage =
+        getElement("forumPage");
+
+    const threadPage =
+        getElement("threadPage");
+
+    const createPage =
+        getElement("createPage");
+
+
+    if (forumPage)
+        forumPage.style.display =
+            "none";
+
+    if (threadPage)
+        threadPage.style.display =
+            "none";
+
+    if (createPage)
+        createPage.style.display =
+            "block";
+
+}
+
+
+/* =========================================================
+   POST THREAD
+========================================================= */
+
+async function postThread() {
+
+    const result =
+        await supabaseClient
+        .auth
+        .getUser();
+
+    const user =
+        result.data?.user ||
+        null;
+
+
+    if (!user) {
+
+        openLogin();
+
+        return;
+
+    }
+
+
+    if (!currentForum) {
+
+        alert(
+            "Please select a forum first."
+        );
+
+        return;
+
+    }
+
+
+    const titleElement =
+        getElement("threadTitle");
+
+    const messageElement =
+        getElement("threadMessage");
+
+
+    if (
+        !titleElement ||
+        !messageElement
+    ) {
+
+        return;
+
+    }
+
+
+    const title =
+        titleElement.value.trim();
+
+    const text =
+        messageElement.value.trim();
+
+
+    if (!title || !text) {
+
+        alert(
+            "Please enter a title and message."
+        );
+
+        return;
+
+    }
+
+
+    const username =
+        localStorage.getItem(
+            "robloxUsername"
+        ) ||
+        user.user_metadata?.username ||
+        "User";
+
+
+    const threadResult =
+        await supabaseClient
+        .from("threads")
+        .insert({
+
+            forum:
+                currentForum,
+
+            title:
+                title,
+
+            author:
+                username,
+
+            user_id:
+                user.id,
+
+            views:
+                0
+
+        })
+        .select()
+        .single();
+
+
+    if (threadResult.error) {
+
+        alert(
+            threadResult.error.message
+        );
+
+        return;
+
+    }
+
+
+    const thread =
+        threadResult.data;
+
+
+    if (
+        !thread ||
+        thread.id === null ||
+        thread.id === undefined ||
+        thread.id === ""
+    ) {
+
+        alert(
+            "The thread was created, but Supabase did not return its ID."
+        );
+
+        return;
+
+    }
+
+
+    const postResult =
+        await supabaseClient
+        .from("posts")
+        .insert({
+
+            thread_id:
+                Number(thread.id),
+
+            author:
+                username,
+
+            user_id:
+                user.id,
+
+            text:
+                text
+
+        });
+
+
+    if (postResult.error) {
+
+        alert(
+            postResult.error.message
+        );
+
+        return;
+
+    }
+
+
+    titleElement.value =
+        "";
+
+    messageElement.value =
+        "";
+
+
+    await openThread(
+        Number(thread.id)
+    );
+
+}
+
+
+/* =========================================================
+   REPLY
+========================================================= */
+
+async function postReply() {
+
+    if (
+        currentThread === null ||
+        currentThread === undefined
+    ) {
+
+        alert(
+            "No thread selected."
+        );
+
+        return;
+
+    }
+
+
+    const threadId =
+        Number(currentThread);
+
+
+    if (
+        !Number.isInteger(threadId) ||
+        threadId <= 0
+    ) {
+
+        alert(
+            "Invalid thread."
+        );
+
+        return;
+
+    }
+
+
+    const result =
+        await supabaseClient
+        .auth
+        .getUser();
+
+    const user =
+        result.data?.user ||
+        null;
+
+
+    if (!user) {
+
+        openLogin();
+
+        return;
+
+    }
+
+
+    const textarea =
+        getElement("replyText");
+
+
+    if (!textarea)
+        return;
+
+
+    const text =
+        textarea.value.trim();
+
+
+    if (!text) {
+
+        alert(
+            "Please enter a message."
+        );
+
+        return;
+
+    }
+
+
+    const username =
+        localStorage.getItem(
+            "robloxUsername"
+        ) ||
+        user.user_metadata?.username ||
+        "User";
+
+
+    const insertResult =
+        await supabaseClient
+        .from("posts")
+        .insert({
+
+            thread_id:
+                threadId,
+
+            author:
+                username,
+
+            user_id:
+                user.id,
+
+            text:
+                text
+
+        });
+
+
+    if (insertResult.error) {
+
+        alert(
+            insertResult.error.message
+        );
+
+        return;
+
+    }
+
+
+    textarea.value =
+        "";
+
+
+    await loadPosts(
+        threadId
+    );
+
+}
+
+
+/* =========================================================
+   BACK
+========================================================= */
+
+function backToForum() {
+
+    if (!currentForum) {
+
+        const forumPage =
+            getElement("forumPage");
+
+        const threadPage =
+            getElement("threadPage");
+
+        const createPage =
+            getElement("createPage");
+
+
+        if (forumPage)
+            forumPage.style.display =
+                "block";
+
+        if (threadPage)
+            threadPage.style.display =
+                "none";
+
+        if (createPage)
+            createPage.style.display =
+                "none";
+
+        return;
+
+    }
+
+
+    openForum(
+        currentForum
+    );
+
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+function formatDate(value) {
+
+    if (!value)
+        return "Unknown date";
+
+
+    const d =
+        new Date(value);
+
+
+    if (
+        Number.isNaN(
+            d.getTime()
+        )
+    ) {
+
+        return "Unknown date";
+
+    }
+
+
+    return d.toLocaleDateString(
+        "en-US",
+        {
+
+            month:
+                "short",
+
+            day:
+                "numeric",
+
+            year:
+                "numeric"
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(text) {
+
+    return String(
+        text ?? ""
+    )
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        updateAccountArea();
+
+    }
+);
+
+</script>
+
+</body>
+</html>
